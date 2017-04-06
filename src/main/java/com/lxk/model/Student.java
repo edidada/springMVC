@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Created by lxk on 2017/3/27
  */
-@Document(collection = "streams")
+@Document(collection = "student")
 public class Student implements Serializable {
     private String id;
     private String name;
