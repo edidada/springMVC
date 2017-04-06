@@ -1,10 +1,13 @@
 package com.lxk.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.io.Serializable;
 
 /**
  * Created by lxk on 2017/3/27
  */
+@Document(collection = "streams")
 public class Student implements Serializable {
     private String id;
     private String name;

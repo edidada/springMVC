@@ -1,5 +1,6 @@
 package com.lxk.controller;
 
+import com.lxk.model.Student;
 import com.lxk.service.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by lxk on 2017/3/27
@@ -37,7 +39,8 @@ public class StudentController {
 
         ModelAndView mav = new ModelAndView();
         mav.setViewName("studentDisplay");
-        mav.addObject("students", studentService.getAllStudent());
+        List<Student> all =  studentService.getAllStudentInMongo();
+        mav.addObject("students",all);
         return mav;
     }
 }

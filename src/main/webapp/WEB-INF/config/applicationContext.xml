@@ -28,4 +28,7 @@
         </property>
     </bean>
 
+    <!-- dao -->
+    <import resource="applicationContext-dao.xml"/>
+
 </beans>

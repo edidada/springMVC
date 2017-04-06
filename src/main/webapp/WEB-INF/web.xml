@@ -13,6 +13,11 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <context-param>
+        <param-name>log4jRefreshInterval</param-name>
+        <param-value>600000</param-value>
+    </context-param>
+
     <!-- 字符集 过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>
