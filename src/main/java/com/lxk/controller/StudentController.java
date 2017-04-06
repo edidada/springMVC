@@ -1,10 +1,14 @@
 package com.lxk.controller;
 
 import com.lxk.service.StudentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.annotation.Resource;
 
 /**
@@ -14,12 +18,23 @@ import javax.annotation.Resource;
 @RequestMapping("student")
 public class StudentController {
 
+    private static final Logger LOG = LoggerFactory.getLogger(StudentController.class);
+
     @Resource(name = "studentService")
     private StudentService studentService;
 
-    //@ResponseBody//(之前我因为加了这个注解，导致页面访问一直是406错误，注释了就好啦，具体为啥我暂时还不知道)
+    @Value("${notShowStreamOperateLog:false}")
+    private Boolean notShowStreamOperateLog;
+
+    @Value("${selfPort:100}")
+    private String selfPort;
+
+
     @RequestMapping(value = "/getAllStudent", method = RequestMethod.GET)
     public ModelAndView getAllStudent() {
+        LOG.error(selfPort);
+        LOG.error(notShowStreamOperateLog + "");
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("studentDisplay");
         mav.addObject("students", studentService.getAllStudent());

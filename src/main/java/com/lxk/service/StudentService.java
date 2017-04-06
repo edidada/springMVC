@@ -1,6 +1,6 @@
 package com.lxk.service;
 
-import com.lxk.dao.StudentDao;
+import com.lxk.repository.StudentDao;
 import com.lxk.model.Student;
 import org.springframework.stereotype.Service;
 

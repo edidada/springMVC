@@ -21,4 +21,11 @@
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
     </bean>
 
+    <bean id="propertyConfigurer" class="com.lxk.utils.extend.ExtendPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+            </list>
+        </property>
+    </bean>
+
 </beans>

@@ -1,4 +1,4 @@
-package com.lxk.dao;
+package com.lxk.repository;
 
 import com.google.common.collect.Lists;
 import com.lxk.model.Student;
