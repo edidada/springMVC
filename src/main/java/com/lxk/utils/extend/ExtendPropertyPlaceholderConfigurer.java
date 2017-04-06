@@ -19,9 +19,7 @@ import java.util.Properties;
  *
  */
 public class ExtendPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
-//	 private static final Logger logger = Logger.getLogger(ExtendPropertyPlaceholderConfigurer.class);
-	private int systemPropertiesMode = SYSTEM_PROPERTIES_MODE_FALLBACK;
-	
+
 	/**
 	 * context标签时调用
 	*/
@@ -67,7 +65,7 @@ public class ExtendPropertyPlaceholderConfigurer extends PropertyPlaceholderConf
 		}
 
 		public String resolvePlaceholder(String placeholderName) {
-			return ExtendPropertyPlaceholderConfigurer.this.resolvePlaceholder(placeholderName, props, systemPropertiesMode);
+			return ExtendPropertyPlaceholderConfigurer.this.resolvePlaceholder(placeholderName, props, SYSTEM_PROPERTIES_MODE_FALLBACK);
 		}
 	}
 }
