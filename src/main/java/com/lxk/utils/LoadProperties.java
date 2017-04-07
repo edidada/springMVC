@@ -15,11 +15,12 @@ public class LoadProperties {
 	public static String getPath(){
 		String path = System.getProperty("user.dir");
 		LOG.debug("user.dir path:" + path);
-		if(path.lastIndexOf("bin") != -1)
+		if (path.lastIndexOf("bin") != -1) {
 			path = path.substring(0, path.lastIndexOf("bin")) + "conf/lxk";
-		else
+		} else {
 			path = path + "/conf";
-		
+		}
+
 		LOG.debug("substring user.dir path:" + path);
 		return path;
 	}
