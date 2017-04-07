@@ -1,7 +1,6 @@
 package com.lxk.service;
 
 import com.lxk.model.Student;
-import com.lxk.repository.StudentDao;
 import com.lxk.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,18 +13,15 @@ import java.util.List;
 @Service("studentService")
 public class StudentService {
 
-    @Resource(name = "studentDao")
-    private StudentDao studentDao;
-
     @Resource(name = "studentRepository")
     private StudentRepository dao;
 
     public List<Student> getAllStudent() {
-        return studentDao.findAll();
+        return dao.findAll();
     }
 
-    public List<Student> getAllStudentInMongo() {
-        return dao.findAll();
+    public Student save(Student student) {
+        return dao.save(student);
     }
 
     public Student findStudetById(String id) {

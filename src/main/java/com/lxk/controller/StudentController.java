@@ -39,7 +39,7 @@ public class StudentController {
 
         ModelAndView mav = new ModelAndView();
         mav.setViewName("studentDisplay");
-        List<Student> all =  studentService.getAllStudentInMongo();
+        List<Student> all =  studentService.getAllStudent();
         mav.addObject("students",all);
         return mav;
     }
