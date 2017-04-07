@@ -21,9 +21,13 @@
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
     </bean>
 
+    <!-- 这么配置就是使用resources目录下的配置文件，这里是指mongo.properties和default_setting.properties-->
+    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
     <bean id="propertyConfigurer" class="com.lxk.utils.extend.ExtendPropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
+                <!--<value>classpath:default_setting.properties</value>-->
+                <!--<value>classpath:mongo.properties</value>-->
             </list>
         </property>
     </bean>
