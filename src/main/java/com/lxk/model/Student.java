@@ -20,8 +20,7 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(String id, String name, int age, boolean sex) {
-        this.id = id;
+    public Student(String name, int age, boolean sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
