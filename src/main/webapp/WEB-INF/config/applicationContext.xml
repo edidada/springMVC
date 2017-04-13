@@ -14,6 +14,17 @@
     <!-- 开启springMVC的注解驱动，使得url可以映射到对应的controller -->
     <mvc:annotation-driven/>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+            <bean class="com.lxk.utils.interceptor.ApplicationInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+
     <!-- 视图解析 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>

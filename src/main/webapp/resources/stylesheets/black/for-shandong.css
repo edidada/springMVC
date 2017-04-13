@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+.app-widget{
+	width:214px;
+	margin-bottom:15px;
+	margin-right:15px;
+	float:left;
+}
+.app-widget:hover .jump-link:after{
+	opacity:1;
+}
+.app-widget .app-title{
+	height:35px;
+	color:#03438a;
+	background-color: #83acd3;
+	border-radius:5px;
+	-moz-box-shadow:0px 0px 3px rgba(0,0,0,1), 0px 0px 3px rgba(255,255,255,1) inset;
+	-webkit-box-shadow:0px 0px 3px rgba(0,0,0,1), 0px 0px 3px rgba(255,255,255,1) inset;
+	box-shadow:0px 0px 3px rgba(0,0,0,1), 0px 0px 3px rgba(255,255,255,1) inset;
+	background-image: -moz-linear-gradient(top,#bed6ea,#507fb5);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#bed6ea),to(#507fb5));
+	background-image: -webkit-linear-gradient(top,#bed6ea,#507fb5);
+	background-image: -o-linear-gradient(top,#bed6ea,#507fb5);
+	background-image: linear-gradient(to bottom,#bed6ea,#507fb5);
+	background-repeat: repeat-x;
+}
+.app-widget.warning .app-title{
+	background-color:#ea3939;
+}
+.app-title a{
+	font-size:16px;
+	display:block;
+	float:left;
+	color:#03438a;
+	height:35px;
+	line-height:35px;
+	position:relative;
+	padding:0px 10px 0px 6px;
+	max-width:145px;
+	overflow:hidden;
+	white-space: nowrap;
+	word-break: break-word;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+.app-title a:hover{
+	text-decoration:none;
+}
+.app-title .title-img{
+	width:32px;
+	height:32px;
+	float:right;
+	margin:1px 3px;
+	text-align:center;
+	line-height:30px;
+}
+.app-title img{
+	max-width:32px;
+	max-height:32px;
+	outline:none;
+	border:none;
+}
+.app-widget .app-body{
+	margin:2px;
+	border:2px solid #a5c3e0;
+	border-radius:3px;
+	-moz-box-shadow:0px 0px 3px rgba(0,0,0,1);
+	-webkit-box-shadow:0px 0px 3px rgba(0,0,0,1);
+	box-shadow:0px 0px 3px rgba(0,0,0,1);
+	background-color:#e9e9e9;
+	padding:3px;
+	padding-top:0px;
+}
+.app-widget .app-body > div{
+	height:60px;
+	margin-top:4px;
+	width:98px;
+	float:left;
+	background-color:#fff;
+	color:#555;
+	position:relative;
+	cursor:default;
+	border-radius:3px;
+}
+.app-widget .app-body > div > .title{
+	font-size:13px;
+	padding:0px 0px 0px 8px;
+}
+.app-widget .app-body > div > .data{
+	font-size:32px;
+	display:block;
+	position:absolute;
+	top:22px;
+	right:14px;
+	color:#555;
+}
+.app-widget .app-body > div > .unit{
+	font-size:12px;
+	line-height:12px;
+	display:block;
+	position:absolute;
+	bottom:4px;
+	right:4px;
+}
+.app-widget .app-body > div.warning{
+	background-color:#eab839;
+	color:#FFF;
+}
+.app-widget .app-body > div.warning > .data{
+	color:#FFF;
+}
+.app-widget .app-body > div.warning.high{
+	background-color:#ea3939;
+}
+.app-widget .app-body > div:nth-child(even){
+	margin-left:4px;
+}
+.warning > .triangle.up{
+	border-bottom-color:#FFF;
+}
+.warning > .triangle.down{
+	border-top-color:#FFF;
+}
+.app-body .triangle{
+	margin-left:14px;
+}

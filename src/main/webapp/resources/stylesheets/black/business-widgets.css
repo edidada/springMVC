@@ -1,0 +1,280 @@
+html {
+  font-size: 20px;
+}
+#main-container {
+  padding: 20px;
+}
+.business-widget {
+  width: 49%;
+  margin: 0 2% 2% 0;
+  float: left;
+  padding: 12% 0;
+  position: relative;
+  border-radius: 0.3rem;
+  background-color: #2d2d2d;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.business-widget.set {
+  display: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  background-color: transparent;
+}
+.edit .business-widget.set {
+  display: block;
+}
+.business-widget:nth-child(2n) {
+  margin-right: 0;
+}
+.business-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  -webkit-transition: left 400ms;
+  -moz-transition: left 400ms;
+  -o-transition: left 400ms;
+  transition: left 400ms;
+}
+.business-container.set {
+  left: 100%;
+}
+.edit > .business-container {
+  left: -100%;
+}
+.edit > .business-container.set {
+  left: 0;
+}
+.dropdown-changerange {
+  display: inline-block;
+  font-size: 12px;
+  text-align: left;
+  float: none;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+.dropdown-changerange-toggle-a {
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 0.5);
+}
+.app-date-setting {
+  margin-bottom: 5px;
+}
+.app-date-setting > span {
+  vertical-align: middle;
+}
+.business-main-container .float-btns {
+  display: none;
+}
+.business-main-container.edit .float-btns {
+  display: block;
+}
+.business-main-container .edit .float-btns {
+  display: none;
+}
+.business-title {
+  line-height: 1;
+  padding: 0.3rem 0.3rem;
+  font-size: 1.5rem;
+}
+.business-body {
+  position: absolute;
+  /*top: 2.6rem;*/
+  top: 2rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+}
+.set > .business-body {
+  top: 0.5rem;
+}
+.business-set-area {
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.business-data {
+  height: 50%;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0.4rem;
+}
+.business-data > * {
+  vertical-align: bottom;
+  line-height: 1;
+}
+.business-data-title {
+  font-size: .5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.business-data-count {
+  margin-top: 1rem;
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+.business-data-unit {
+  color: rgba(255, 255, 255, 0.8);
+}
+.add-business {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: rgba(255, 255, 255, 0.25);
+}
+.add-business:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.add-business > i {
+  display: inline-block;
+  font-size: 6rem;
+  line-height: 1;
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.business-control-area {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  text-align: right;
+}
+.business-set-area input {
+  height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+.business-set-area .business-set-title {
+  display: inline-block;
+  width: 15%;
+  margin-bottom: 0;
+  height: 30px;
+  text-align: right;
+  vertical-align: middle;
+}
+.business-set-area > * {
+  margin-top: 10px;
+}
+/* 支持添加icon */
+.monitor-show-logo {
+  position: absolute;
+  bottom: 1.2rem;
+  left: .8rem;
+  max-width: 15%;
+}
+.logo-area-img[name="noLogo"],
+.logo-area-text {
+  display: none;
+}
+.logo-area-img[name="noLogo"] + .logo-area-text {
+  display: inline;
+}
+.logo-area {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border: solid 1px rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.logo-picker {
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  width: 400px;
+  height: 200px;
+  background-color: #2d2d2d;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px 5px 10px 5px;
+  overflow: auto;
+  visibility: hidden;
+  line-height: 88px;
+  text-align: left;
+}
+.logo-picker-controller {
+  display: none;
+}
+.logo-picker-controller:checked + .logo-picker {
+  visibility: visible;
+}
+.trans-monitor-logo {
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 7px;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+}
+.trans-monitor-logo.monitor-logo-default {
+  border: dashed 1px rgba(255, 255, 255, 0.25);
+  line-height: 88px;
+  text-align: center;
+}
+.logo-picker .pick-controller {
+  display: none;
+}
+.pick-controller + .check-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-align: center;
+}
+.pick-controller + .check-container .monitor-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #0099ee;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  visibility: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.pick-controller:checked + .check-container {
+  box-shadow: 0 0 0 3px #0099ee;
+}
+.pick-controller:checked + .check-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+}
+.logo-picker-controller:checked + .logo-picker .pick-controller:checked + .check-container .monitor-icon {
+  visibility: visible;
+}

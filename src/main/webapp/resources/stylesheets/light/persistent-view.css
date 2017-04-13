@@ -1,0 +1,203 @@
+.node {
+  display: inline-block;
+  width: 240px;
+  position: relative;
+  margin: 5px 0;
+  vertical-align: middle;
+}
+.tplot div.node div.body {
+  height: 100%;
+}
+.tplot .showMode {
+  cursor: default;
+}
+.for-time-label .tplot .node .title {
+  font-weight: normal;
+  max-width: 120%;
+}
+.tplot .showMode .body {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  /*background-color: transparent;*/
+}
+.tplot .showMode .messages .message:after {
+  height: 1px;
+}
+.tplot .showMode .messages .message:before {
+  width: 1px;
+}
+.overview-data-unit {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* F5 item */
+.list-item-container {
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #ffffff;;
+  border-radius: 4px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.list-item-container + .list-item-container {
+  margin-top: 8px;
+}
+.list-item-header {
+  line-height: 24px;
+  font-size: 0;
+  cursor: pointer;
+  font-weight: normal;
+  overflow: hidden;
+}
+.list-item-body {
+  padding: 5px 20px 35px;
+  text-align: center;
+  display: none;
+}
+.list-item-header > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  font-size: 14px;
+  min-width: 11em;
+}
+.list-item-header > i {
+  -moz-transition: transform 200ms;
+  -webkit-transition: transform 200ms;
+  transition: transform 200ms;
+  font-size: 13px;
+  width: 1em;
+  height: 24px;
+}
+.list-item-overview {
+  display: inline-block;
+  line-height: inherit;
+  margin-left: 20px;
+}
+.list-item-header-data-container {
+  display: inline-block;
+  height: 12px;
+  vertical-align: middle;
+  padding: 0 12px;
+}
+.list-item-header-data-container + .list-item-header-data-container {
+  border-left: 1px dashed rgba(255, 255, 255, 0.25);
+}
+.item-data {
+  font-size: 14px;
+  line-height: 12px;
+  vertical-align: super;
+  padding: 0 2px;
+}
+.item-data-unit {
+  font-size: 14px;
+  /*color: rgba(255, 255, 255, 0.5);*/
+  line-height: 12px;
+  vertical-align: super;
+  padding: 0 2px;
+  margin-left: 3px;
+}
+.open .list-item-header > i {
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.open .list-item-body {
+  display: block;
+}
+.list-item-body > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.conn-line {
+  height: 2px;
+  width: 92px;
+  margin: 10px;
+  background-color: #0099ee;
+}
+.conn-line.no-data {
+  /*background-color: rgba(255, 255, 255, 0.5);*/
+}
+.smaller-size {
+  width: 120px;
+  height: 80px;
+}
+.tplot .smaller-size.node div.body div.messages div.message div.text {
+  margin-top: 0;
+}
+.tplot .smaller-size.node.one div.body div.messages div.message span.message-value {
+  font-size: 32px;
+  line-height: 80px;
+}
+.tplot .smaller-size.node.one div.body div.messages div.message span.message-unit {
+  line-height: 65px;
+}
+.tplot .smaller-size.node.two div.body div.messages div.message span.message-value {
+  font-size: 24px;
+  line-height: 40px;
+}
+.icon-checkmark,
+.icon-remove {
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  line-height: 21px;
+}
+.icon-checkmark {
+  color: #0099ee;
+}
+.icon-remove {
+  /*color: rgba(255, 255, 255, 0.5);*/
+}
+.conn-message {
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 32px;
+  left: -38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.node-icon {
+  line-height: 80px;
+  font-size: 56px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.go-to-dashboard {
+  visibility: hidden;
+  margin-left: 50px;
+  font-size: 20px;
+}
+.go-to-dashboard:hover {
+  cursor: pointer;
+}
+.list-item-body.tplot:hover .go-to-dashboard {
+  visibility: visible;
+}
+/* fix action-bar */
+.action-bar {
+  z-index: 21;
+}
+.tplot div.node div.body div.messages div.message span.message-unit{
+  line-height: 40px;
+  font-size: 14px;
+  padding: 1px 2px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: bottom;
+  opacity: 0.8;
+}
+
+.tplot div.node div.body div.messages div.message span.message-value {
+  font-size: 24px;
+  line-height: 50px;
+}
+.node-title-inner {
+  overflow: hidden;
+  margin: 0 15px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}

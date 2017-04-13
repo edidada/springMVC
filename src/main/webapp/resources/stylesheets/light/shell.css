@@ -1,0 +1,44 @@
+#shell-container {
+    background-color: black;
+    padding: 15px 10px 10px 10px;
+    padding-left: 100px;
+    position: relative
+}
+
+input#shell-command-input {
+    border: 0;
+    font-size: 14px;
+    width: 97%;
+    margin: 0;
+}
+
+div.shell-prompt {
+    width: 90px;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+div.shell-content {
+    width: 100%;
+}
+
+#shell-container {
+    color: #fff;
+    font-size: 14px;
+}
+
+div#shell-output {
+    padding: 5px 0 0 0;
+}
+
+span.error-result {
+    color: #d54d2b;
+    font-size: 12px;
+}
+
+#analytics-result {
+    margin-top: 15px;
+}
+

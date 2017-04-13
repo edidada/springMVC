@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'ezicon';
+	src:url('fonts/ezicon.eot?c4v942');
+	src:url('fonts/ezicon.eot?#iefixc4v942') format('embedded-opentype'),
+		url('fonts/ezicon.woff?c4v942') format('woff'),
+		url('fonts/ezicon.ttf?c4v942') format('truetype'),
+		url('fonts/ezicon.svg?c4v942#ezicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="newicon-"], [class*=" newicon-"] {
+	font-family: 'ezicon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.newicon-drive:before {
+	content: "\e963";
+}
+
+.newicon-database:before {
+	content: "\e964";
+}
+
+.newicon-shield:before {
+	content: "\e9b4";
+}
+
+.newicon-shuffle:before {
+	content: "\ea30";
+}
+
+.newicon-tab:before {
+	content: "\ea45";
+}
+
+.newicon-star:before {
+	content: "\f005";
+}
+
+.newicon-star-o:before {
+	content: "\f006";
+}
+
+.newicon-desktop:before {
+	content: "\f108";
+}
+
+.newicon-server:before {
+	content: "\f233";
+}
+
+.newicon-log-out:before {
+	content: "\e600";
+}
+
+.newicon-login:before {
+	content: "\e601";
+}
+
+.newicon-star-outlined:before {
+	content: "\e602";
+}
+
+.newicon-star2:before {
+	content: "\e603";
+}
+

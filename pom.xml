@@ -5,7 +5,7 @@
     <artifactId>springMVC</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>springMVC Maven Webapp</name>
+    <name>springMVC Maven Web app</name>
     <url>http://localhost:8080/lxk/student/getAllStudent</url>
 
     <properties>

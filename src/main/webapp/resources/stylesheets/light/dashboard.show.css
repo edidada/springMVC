@@ -1,0 +1,26 @@
+.widget_s > .highcharts-container > svg {
+  opacity: 0;
+}
+.tools-area .chosen-container-single .chosen-single {
+  height: 100%;
+  line-height: inherit;
+  border: none;
+  box-shadow: none !important;
+}
+.show-page .tools-area .chosen-container-single .chosen-single {
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.7);
+}
+.float-tools-bar .tools-area .chosen-container-single {
+  margin-right: -1px;
+  float: right !important;
+}
+.float-tools-bar.open {
+  width: 310px;
+}
+.open .tools-area {
+  width: 270px;
+  overflow: visible;
+}
