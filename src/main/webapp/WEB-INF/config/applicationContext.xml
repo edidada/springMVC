@@ -12,6 +12,8 @@
     <context:component-scan base-package="com.lxk"/>
 
     <!-- 开启springMVC的注解驱动，使得url可以映射到对应的controller -->
+    <!-- 据资料显示：可以防止ajax下载文件，可以使得json对象在后台直接转换 -->
+    <!--在SpringMVC中，可以使用@RequestBody和@ResponseBody两个注解，分别完成请求报文到对象和对象到响应报文的转换，顺序不能乱-->
     <mvc:annotation-driven>
         <mvc:message-converters register-defaults="false">
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
@@ -28,6 +30,7 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <!-- 拦截器，可以拦截所有请求，剔除静态资源（js，css，img）url的拦截 -->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
@@ -36,6 +39,7 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
+    <!--处理静态资源的请求-->
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
