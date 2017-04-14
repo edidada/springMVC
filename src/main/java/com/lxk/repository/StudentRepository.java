@@ -19,4 +19,7 @@ public interface StudentRepository extends MongoRepository<Student, String> {
     @Query("{'name':?0}")
     List<Student> findByName(String name);
 
+    @Query("{'name':?0,'age':?1}")
+    List<Student> findByNameAndAge(String name,int age);
+
 }

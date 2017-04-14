@@ -103,8 +103,6 @@ $(document).ready(function () {
     SYSTEM_STATE_HTML = $("#system_state");
     LAST_HEALTH_STATE = $.cookie("lastHealthState");
     $("#system_state").remove();
-    getHealthInfo();
-    setInterval(getHealthInfo, 5 * 60 * 1000);//每五分钟刷新
 });
 
 var GMS = new function () {

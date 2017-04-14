@@ -31,4 +31,9 @@ public class StudentService {
     public List<Student> findStudetByName(String name) {
         return dao.findByName(name);
     }
+
+    public List<Student> findStudetByNameAndAge(String name, int age) {
+        return dao.findByNameAndAge(name, age);
+    }
+
 }

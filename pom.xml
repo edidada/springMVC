@@ -14,6 +14,7 @@
         <com.google.guava-version>19.0</com.google.guava-version>
         <org.slf4j-version>1.7.5</org.slf4j-version>
         <org.spring-data-mongodb-version>1.5.0.RELEASE</org.spring-data-mongodb-version>
+        <jackson.version>2.2.3</jackson.version>
     </properties>
 
     <dependencies>
@@ -144,6 +145,18 @@
                     <groupId>org.springframework</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- Jackson JSON Processor -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
     </dependencies>

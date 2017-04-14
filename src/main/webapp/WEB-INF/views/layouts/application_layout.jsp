@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Spring MVC Hello World</title>
-	<jsp:include page="shared/_include_common.jsp" />
-	<script type="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <jsp:include page="../shared/_include_common.jsp" />
+    <script type="text/javascript">
         $(function(){
             $.ajaxSetup({
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -49,32 +48,13 @@
                 handle: ".modal-header"
             });
         }
-	</script>
+    </script>
+    <title>Title</title>
 </head>
-
 <body>
-	<h2>All Students in System</h2>
+<script type="text/javascript">
 
-	<table border="1">
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Sex</th>
-		</tr>
-		<c:forEach var="student" items="${students}">
-			<tr>
-				<td>${student.id}</td>
-				<td>${student.name}</td>
-				<td>${student.age}</td>
-				<td>${student.sex}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	<button id="getByName" type="button" class="btn btn-primary mini">查找</button>
-	<button id="create" type="button" class="btn btn-primary mini">新建</button>
-	<button id="getByNameAndAge" type="button" class="btn btn-primary mini">查找2</button>
+</script>
+
 </body>
 </html>
-
-<script src="<c:url value='/resources/javascripts/test/test.js'/>"></script>
