@@ -74,7 +74,28 @@
 	<button id="getByName" type="button" class="btn btn-primary mini">查找</button>
 	<button id="create" type="button" class="btn btn-primary mini">新建</button>
 	<button id="getByNameAndAge" type="button" class="btn btn-primary mini">查找2</button>
+	<select id="my_select" class="chzn-select force-valid " multiple data-placeholder="请选择内容"
+			style="width:100px; display:none;margin-left: 10px;">
+		<option value="eq">等于</option>
+		<option value="gt">大于</option>
+		<option value="lt">小于</option>
+		<option value="neq">不等于</option>
+	</select>
+
 </body>
 </html>
-
+<jsp:include page="shared/_include_chosen.jsp"/>
 <script src="<c:url value='/resources/javascripts/test/test.js'/>"></script>
+<script type="text/javascript">
+    $(function () {
+        var $select = $("#my_select");
+        $select.chosen({
+            no_results_text: "没有匹配项",
+            disable_search: true,
+            allow_single_deselect: false
+        });
+        $select.live('change', function () {
+            console.log($(this).val());
+		});
+    });
+</script>
