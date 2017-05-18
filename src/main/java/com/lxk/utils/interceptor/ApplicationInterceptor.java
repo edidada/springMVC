@@ -17,13 +17,10 @@ public class ApplicationInterceptor extends HandlerInterceptorAdapter {
         SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("sessionInfo");
 
         String root = request.getContextPath();//项目名称，根路径
-        System.out.println("项目名称，根路径" + root);
         String accessPath = request.getRequestURI();//访问路径
-        System.out.println("访问路径" + accessPath);
         String servletPath = request.getServletPath();//相对路径
-        System.out.println("相对路径" + servletPath);
         String accessParam = request.getQueryString();//参数
-        System.out.println("参数" + accessParam);
+        //System.out.println("项目名称，根路径" + root + ";访问路径" + accessPath + ";参数" + ";相对路径" + servletPath + accessParam);
         return true;
     }
 }
