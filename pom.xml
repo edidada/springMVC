@@ -42,13 +42,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- guava谷歌工具包 -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${com.google.guava-version}</version>
-        </dependency>
-
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -175,6 +168,12 @@
             <version>${lombok-verison}</version>
         </dependency>
 
+        <!-- guava谷歌工具包 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${com.google.guava-version}</version>
+        </dependency>
     </dependencies>
 
 
