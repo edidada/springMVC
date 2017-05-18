@@ -84,18 +84,6 @@
 
 </body>
 </html>
+
 <jsp:include page="shared/_include_chosen.jsp"/>
 <script src="<c:url value='/resources/javascripts/test/test.js'/>"></script>
-<script type="text/javascript">
-    $(function () {
-        var $select = $("#my_select");
-        $select.chosen({
-            no_results_text: "没有匹配项",
-            disable_search: true,
-            allow_single_deselect: false
-        });
-        $select.live('change', function () {
-            console.log($(this).val());
-		});
-    });
-</script>

@@ -1,4 +1,13 @@
 $(function () {
+    var $select = $("#my_select");
+    $select.chosen({
+        no_results_text: "没有匹配项",
+        disable_search: true,
+        allow_single_deselect: false
+    });
+    $select.live('change', function () {
+        console.log($(this).val());
+    });
     $("#getByName").live("click", function () {
         getStudentByName();
     });
