@@ -74,6 +74,7 @@
 	<button id="getByName" type="button" class="btn btn-primary mini">查找</button>
 	<button id="create" type="button" class="btn btn-primary mini">新建</button>
 	<button id="getByNameAndAge" type="button" class="btn btn-primary mini">查找2</button>
+	<a href="/lxk/blog">跳转到博客分享页面</a>
 	<select id="my_select" class="chzn-select force-valid " multiple data-placeholder="请选择内容"
 			style="width:100px; display:none;margin-left: 10px;">
 		<option value="eq">等于</option>
