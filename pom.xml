@@ -147,7 +147,7 @@
             </exclusions>
         </dependency>
 
-        <!-- Jackson JSON Processor -->
+        <!-- Jackson JSON Processor @ResponseBody,要把对象转换成json格式-->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
@@ -157,6 +157,13 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- json转换很是方便的工具jar -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.21</version>
         </dependency>
 
     </dependencies>
