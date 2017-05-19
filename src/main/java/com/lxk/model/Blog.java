@@ -52,6 +52,10 @@ public class Blog {
      * 踩的个数
      */
     private Integer tread;
+    /**
+     * 文章在CSDN网站的ID（可使用它生成文章的URL）
+     */
+    private String articleId;
 
 
     @Override
