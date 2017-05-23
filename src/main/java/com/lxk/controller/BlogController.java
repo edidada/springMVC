@@ -39,8 +39,8 @@ public class BlogController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "saveBlog", method = RequestMethod.POST)
-    public JsonResult saveBlog(@RequestBody BlogList blogList) {
+    @RequestMapping(value = "saveBlogList", method = RequestMethod.POST)
+    public JsonResult saveBlogList(@RequestBody BlogList blogList) {
         if (blogList == null) {
             return new JsonResult(false, "blogList is null");
         }

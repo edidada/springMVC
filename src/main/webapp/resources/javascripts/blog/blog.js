@@ -36,7 +36,7 @@ function saveBlogList() {
         name: "lxk"
     };
     $.ajax({
-        url: "/lxk/blog/saveBlog",
+        url: "/lxk/blog/saveBlogList",
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         type: "post",
