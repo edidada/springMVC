@@ -25,6 +25,11 @@ public enum BlogSortTypeEnum {
      */
     TREAD;
 
+    /**
+     * 根据字符串返回对应类型的枚举变量
+     *
+     * @param sortType 类型的字符串描述
+     */
     @Nullable
     public static BlogSortTypeEnum fromTypeName(String sortType) {
         if (Blog.READ.equals(sortType)) {

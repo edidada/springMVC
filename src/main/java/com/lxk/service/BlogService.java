@@ -20,15 +20,25 @@ public class BlogService {
     @Resource(name = "blogRepository")
     private BlogRepository dao;
 
+    /**
+     * 获得所有博客信息集合
+     */
     public List<Blog> findAllBlog() {
         return dao.findAll();
     }
 
+    /**
+     * 根据文章标题获得博客信息
+     *
+     * @param title 博客文章标题
+     */
     public List<Blog> findBlogByTitle(String title) {
         return dao.findByTitle(title);
     }
 
     /**
+     * 获得top n，并按某类型排序。
+     *
      * @param topN 前n个
      * @param type 类型：read or ping
      */
@@ -49,6 +59,12 @@ public class BlogService {
         return result;
     }
 
+    /**
+     * 根据某类型排序集合
+     *
+     * @param type 类型，read或者ping{@link Blog#READ,Blog#PING}
+     * @param list 博客信息集合
+     */
     public void sortAllBlog(String type, List<Blog> list) {
         if (BlogSortTypeEnum.READ == BlogSortTypeEnum.fromTypeName(type)) {
             list.sort(OrderingConstants.BLOG_READ_ORDERING);
@@ -57,6 +73,11 @@ public class BlogService {
         }
     }
 
+    /**
+     * 循环保存博客信息集合，名称重复则不保存。
+     *
+     * @param blogList 博客信息集合
+     */
     public Boolean saveList(List<Blog> blogList) {
         List<String> repeat = Lists.newArrayList();
         for (Blog blog : blogList) {

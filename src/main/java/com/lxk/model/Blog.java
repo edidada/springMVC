@@ -19,7 +19,13 @@ import java.util.List;
 @Document(collection = "blog")
 public class Blog {
     private static final long serialVersionUID = 1L;
+    /**
+     * 点击次数
+     */
     public static final String READ = "read";
+    /**
+     * 评论次数
+     */
     public static final String PING = "ping";
 
     @Id

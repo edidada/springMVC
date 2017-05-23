@@ -13,6 +13,8 @@ import java.util.Locale;
  */
 public interface OrderingConstants {
 
+    //汉字按拼音排序
+    //collator.compare(left.getTitle(), right.getTitle())
     Collator collator = Collator.getInstance(Locale.CHINA);
 
     /**

@@ -29,6 +29,9 @@ public class BlogController {
     @Resource(name = "blogService")
     private BlogService blogService;
 
+    /**
+     * init：初始化页面
+     */
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ModelAndView init() {
         LOG.debug("---------------BlogController: init---------------");
@@ -38,6 +41,11 @@ public class BlogController {
         return mav;
     }
 
+    /**
+     * 保存多个博客信息到数据库
+     *
+     * @param blogList n多个博客信息的集合，封装的对象
+     */
     @ResponseBody
     @RequestMapping(value = "saveBlogList", method = RequestMethod.POST)
     public JsonResult saveBlogList(@RequestBody BlogList blogList) {
@@ -48,6 +56,11 @@ public class BlogController {
         return result ? new JsonResult(true, "保存成功") : new JsonResult(false, "保存失败");
     }
 
+    /**
+     * 获得所有博客信息，并按某类型排序。
+     *
+     * @param type 类型，read或者ping{@link Blog#READ,Blog#PING}
+     */
     @ResponseBody
     @RequestMapping(value = "/getAllBlog", method = RequestMethod.GET)
     public List<Blog> getAllBlog(String type) {
@@ -59,6 +72,12 @@ public class BlogController {
         return all;
     }
 
+    /**
+     * 获得top n，并按某类型排序。
+     *
+     * @param topN 前N个
+     * @param type 类型，read或者ping{@link Blog#READ,Blog#PING}
+     */
     @ResponseBody
     @RequestMapping(value = "/getTopNBlog", method = RequestMethod.GET)
     public List<Blog> getTopNBlog(Integer topN, String type) {
