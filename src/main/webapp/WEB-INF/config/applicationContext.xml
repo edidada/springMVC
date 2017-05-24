@@ -28,6 +28,9 @@
             </bean>
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
         </mvc:message-converters>
+        <mvc:argument-resolvers>
+            <bean class="com.lxk.mvc.resolver.UserArgumentResolver"/>
+        </mvc:argument-resolvers>
     </mvc:annotation-driven>
 
     <!-- 拦截器，可以拦截所有请求，剔除静态资源（js，css，img）url的拦截 -->
