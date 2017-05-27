@@ -23,7 +23,11 @@ public enum BlogSortTypeEnum {
     /**
      * 踩
      */
-    TREAD;
+    TREAD,
+    /**
+     * 增长
+     */
+    INCREASE;
 
     /**
      * 根据字符串返回对应类型的枚举变量
@@ -36,6 +40,8 @@ public enum BlogSortTypeEnum {
             return READ;
         } else if (Blog.PING.equals(sortType)) {
             return PING;
+        } else if (Blog.INCREASE.equals(sortType)) {
+            return INCREASE;
         }
         return null;
     }

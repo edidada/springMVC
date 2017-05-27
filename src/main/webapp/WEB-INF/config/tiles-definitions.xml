@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="layouts.application_layout" template="/WEB-INF/views/layouts/application_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+        <put-attribute name="breadcrumb" value="" />
+        <put-attribute name="main-container" value="" />
+        <put-attribute name="dialog" value="" />
+        <put-attribute name="quickfilter" value="" />
+    </definition>
+</tiles-definitions>

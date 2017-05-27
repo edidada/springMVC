@@ -1,12 +1,15 @@
 package com.lxk.model;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Sets;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 博客
@@ -27,6 +30,10 @@ public class Blog {
      * 评论次数
      */
     public static final String PING = "ping";
+    /**
+     * 增长数量
+     */
+    public static final String INCREASE = "increase";
 
     @Id
     private String id;
@@ -35,33 +42,42 @@ public class Blog {
      */
     private String title;
     /**
-     * 评论
+     * 文章发布日期
+     */
+    private Date createTime;
+    /**
+     * 文章在CSDN网站的ID（可使用它生成文章的URL）
+     */
+    private String articleId;
+    /**
+     * 评论(记录最新一次)
      */
     private Integer ping;
     /**
-     * 阅读次数，或者叫文章点击数
+     * 阅读次数，或者叫文章点击数(记录最新一次)
      */
     private Integer read;
+    /**
+     * 顶的个数(记录最新一次)
+     */
+    private Integer praise;
+    /**
+     * 踩的个数(记录最新一次)
+     */
+    private Integer tread;
     /**
      * 文章所在类别（同一篇文章可属于多个类别）
      */
     private List<String> category;
     /**
-     * 文章发布日期
+     * 一篇博客的指标信息集合
      */
-    private Date createTime;
+    private Set<BlogIndex> blogIndexSet = Sets.newHashSet();
     /**
-     * 顶的个数
+     * 增长数量
      */
-    private Integer praise;
-    /**
-     * 踩的个数
-     */
-    private Integer tread;
-    /**
-     * 文章在CSDN网站的ID（可使用它生成文章的URL）
-     */
-    private String articleId;
+    @Transient
+    private Integer increase = 0;
 
 
     @Override

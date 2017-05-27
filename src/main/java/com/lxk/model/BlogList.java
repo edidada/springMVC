@@ -2,6 +2,7 @@ package com.lxk.model;
 
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,6 +12,16 @@ import java.util.List;
  */
 @Data
 public class BlogList {
-    List<Blog> blogList;
-    String name;
+    /**
+     * 保存的一波博客信息
+     */
+    private List<Blog> blogList;
+    /**
+     * 作者名称
+     */
+    private String name;
+    /**
+     * 获取博客数据的日期
+     */
+    private Date date;
 }

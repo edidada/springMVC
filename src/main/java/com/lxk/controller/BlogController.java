@@ -52,7 +52,7 @@ public class BlogController {
         if (blogList == null) {
             return new JsonResult(false, "blogList is null");
         }
-        Boolean result = blogService.saveList(blogList.getBlogList());
+        Boolean result = blogService.saveList(blogList.getBlogList(), blogList.getDate());
         return result ? new JsonResult(true, "保存成功") : new JsonResult(false, "保存失败");
     }
 

@@ -49,4 +49,20 @@ public interface OrderingConstants {
         }
     };
 
+    /**
+     * 博客按评论多少排序
+     */
+    Ordering<Blog> BLOG_INCREASE_ORDERING = new Ordering<Blog>() {
+        @Override
+        public int compare(Blog left, Blog right) {
+            if (left == null || left.getIncrease() == null) {
+                return -1;
+            }
+            if (right == null || right.getIncrease() == null) {
+                return 1;
+            }
+            return right.getIncrease() - left.getIncrease();
+        }
+    };
+
 }
