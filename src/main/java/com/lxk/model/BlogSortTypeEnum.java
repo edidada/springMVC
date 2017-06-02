@@ -42,6 +42,10 @@ public enum BlogSortTypeEnum {
             return PING;
         } else if (Blog.INCREASE.equals(sortType)) {
             return INCREASE;
+        } else if (Blog.PRAISE.equals(sortType)) {
+            return PRAISE;
+        } else if (Blog.TREAD.equals(sortType)) {
+            return TREAD;
         }
         return null;
     }

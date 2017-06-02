@@ -34,6 +34,8 @@ public class Blog {
      * 增长数量
      */
     public static final String INCREASE = "increase";
+    public static final String PRAISE = "praise";
+    public static final String TREAD = "tread";
 
     @Id
     private String id;
@@ -52,19 +54,19 @@ public class Blog {
     /**
      * 评论(记录最新一次)
      */
-    private Integer ping;
+    private int ping;
     /**
      * 阅读次数，或者叫文章点击数(记录最新一次)
      */
-    private Integer read;
+    private int read;
     /**
      * 顶的个数(记录最新一次)
      */
-    private Integer praise;
+    private int praise;
     /**
      * 踩的个数(记录最新一次)
      */
-    private Integer tread;
+    private int tread;
     /**
      * 文章所在类别（同一篇文章可属于多个类别）
      */
@@ -78,6 +80,10 @@ public class Blog {
      */
     @Transient
     private Integer increase = 0;
+    /**
+     * url：/qq_27093465/article/details/71440085
+     */
+    private String href;
 
 
     @Override

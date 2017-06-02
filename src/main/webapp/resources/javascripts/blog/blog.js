@@ -17,6 +17,12 @@ $(function () {
     $("#getAllBlogSortByPing").live("click", function () {
         getAllBlogList("ping");
     });
+    $("#getAllBlogSortByPraise").live("click", function () {
+        getAllBlogList("praise");
+    });
+    $("#getAllBlogSortByTread").live("click", function () {
+        getAllBlogList("tread");
+    });
 });
 
 function getAllBlogList(type) {
@@ -35,9 +41,9 @@ function getAllBlogList(type) {
 
 function saveBlogList() {
     var data = {
-        blogList: getBlogListToSave1(),
+        blogList: getBlogListToSave2(),
         name: "lxk",
-        date:new Date(2017,4,25)
+        date:new Date(2017,5,1)
     };
     $.ajax({
         url: "/lxk/blog/saveBlogList",
@@ -75,11 +81,15 @@ function setTable(data) {
         var title = data[obj].title;
         var ping = data[obj].ping;
         var increase = data[obj].increase;
+        var praise = data[obj].praise;
+        var tread = data[obj].tread;
 
-        trs += "<tr><td title='" + title + "'>" + title + "</td>";
+        trs += "<tr><td style='width: 600px;' title='" + title + "'>" + title + "</td>";
         trs += "<td title='" + read + "'>" + read + "</td>";
         trs += "<td title='" + ping + "'>" + ping + "</td>";
         trs += "<td title='" + increase + "'>" + increase + "</td>";
+        trs += "<td title='" + praise + "'>" + praise + "</td>";
+        trs += "<td title='" + tread + "'>" + tread + "</td>";
         trs += "</tr>";
     }
     tbody.append(trs);

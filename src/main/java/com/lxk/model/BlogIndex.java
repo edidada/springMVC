@@ -19,19 +19,19 @@ public class BlogIndex {
     /**
      * 评论
      */
-    private Integer ping;
+    private int ping;
     /**
      * 阅读次数，或者叫文章点击数
      */
-    private Integer read;
+    private int read;
     /**
      * 顶的个数
      */
-    private Integer praise;
+    private int praise;
     /**
      * 踩的个数
      */
-    private Integer tread;
+    private int tread;
 
     /**
      * 同一篇博客的指标由这几个属性决定，若相同，则不需要重复添加。

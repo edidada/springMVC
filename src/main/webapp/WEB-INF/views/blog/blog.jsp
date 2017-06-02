@@ -10,16 +10,20 @@
 <button id="saveBlog" type="button" class="btn btn-primary mini">保存数据</button>
 <button id="getAllBlogSortByRead" type="button" class="btn btn-primary mini" style="width: 150px;">获得所有数据(READ)</button>
 <button id="getAllBlogSortByPing" type="button" class="btn btn-primary mini" style="width: 150px;">获得所有数据(PING)</button>
+<button id="getAllBlogSortByPraise" type="button" class="btn btn-primary mini" style="width: 150px;">获得所有数据(顶)</button>
+<button id="getAllBlogSortByTread" type="button" class="btn btn-primary mini" style="width: 150px;">获得所有数据(踩)</button>
 <button id="getBlogTopReadN" type="button" class="btn btn-primary mini" style="width: 230px;">获得Top Read N（n = 20）数据</button>
 <button id="getBlogTopPingN" type="button" class="btn btn-primary mini" style="width: 230px;">获得Top Ping N（n = 20）数据</button>
 <button id="getBlogTopIncreaseN" type="button" class="btn btn-primary mini" style="width: 230px;">获得Top Increase N（n = 50）数据</button>
 <table id="blogTable">
     <thead>
     <tr>
-        <th>标题</th>
+        <th style="width: 100px;">标题</th>
         <th>点击数</th>
         <th>评论数</th>
         <th id="increase">增长量</th>
+        <th id="praise">顶</th>
+        <th id="tread">踩</th>
     </tr>
     </thead>
     <tbody>

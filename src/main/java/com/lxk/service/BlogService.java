@@ -97,6 +97,10 @@ public class BlogService {
             list.sort(OrderingConstants.BLOG_PING_ORDERING);
         } else if(BlogSortTypeEnum.INCREASE == BlogSortTypeEnum.fromTypeName(type)){
             list.sort(OrderingConstants.BLOG_INCREASE_ORDERING);
+        } else if(BlogSortTypeEnum.PRAISE == BlogSortTypeEnum.fromTypeName(type)){
+            list.sort(OrderingConstants.BLOG_PRAISE_ORDERING);
+        } else if(BlogSortTypeEnum.TREAD == BlogSortTypeEnum.fromTypeName(type)){
+            list.sort(OrderingConstants.BLOG_TREAD_ORDERING);
         }
     }
 
