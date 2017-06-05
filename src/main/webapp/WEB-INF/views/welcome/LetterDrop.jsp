@@ -74,7 +74,15 @@
         //获取一个随机 char
         function fetchRandomChart() {
             var chars = fetchRandomNum(0, 100);
-            return chars < defaultContent.length ? defaultContent[chars] : String.fromCharCode(chars);
+            //A-Z :65-90 a-z:97-122,修改成只生成字母
+            if (chars < defaultContent.length) {//生成提供的值
+                return defaultContent[chars];
+            } else if ((chars >= 65 && chars <= 90)) {//生成大写字母
+                return String.fromCharCode(chars);
+            } else { //生成小写字母
+                chars = fetchRandomNum(97, 122);
+                return String.fromCharCode(chars)
+            }
         }
 
         /**
