@@ -3,7 +3,7 @@ package com.lxk.controller;
 import com.lxk.AbstractTest;
 import com.lxk.model.Blog;
 import com.lxk.service.BlogService;
-import com.lxk.utils.JsonConvertUtils;
+import com.lxk.utils.JsonUtils;
 import org.junit.Test;
 
 import javax.annotation.Resource;
@@ -32,7 +32,7 @@ public class BlogControllerTest extends AbstractTest {
     public void getTopNBlog() {
         List<Blog> result = blogService.getTopNBlog(10, "read");
         blogService.sortAllBlog("read", result);
-        System.out.println(JsonConvertUtils.parseJsonToString(result));
+        System.out.println(JsonUtils.parseObjToJson(result));
     }
 
 }
