@@ -33,6 +33,7 @@
     var maxWidth = window.innerWidth;
     var maxHeight = window.innerHeight;
 
+    //窗口大小重置时，执行方法
     window.onresize = function () {
         maxWidth = window.innerWidth;
         maxHeight = window.innerHeight;
@@ -44,12 +45,15 @@
     function LetterDrop(intensity) {
 
         this.intensity = intensity;
+        //默认展示的内容
         var defaultContent = [
             "please call me big brother", "请 叫 我 大 湿 胸"
         ];
         this.runningDom = [];
 
-        //随机字体颜色定义-绿色为主
+        /**
+         * 随机字体颜色定义-绿色为主
+         */
         var fontColors = [];
         for (var i = 1; i < 17; i++) {
             var f = i.toString(16);
@@ -61,17 +65,23 @@
             return fontColors[fetchRandomNum(0, fontColors.length)];
         }
 
-        //获取一个随机字体大小 n px
+        /**
+         * 获取一个随机字体大小 n px
+         */
         function fetchFontSize() {
             return fetchRandomNum(9, 25) + "px";
         }
 
-        //获取一个随机数 min ≤ n ≤ max
+        /**
+         * 获取一个随机数 min ≤ n ≤ max
+         */
         function fetchRandomNum(min, max) {
             return Number(min + Math.round(Math.random() * (max - min)));
         }
 
-        //获取一个随机 char
+        /**
+         * 获取一个随机 char
+         */
         function fetchRandomChart() {
             var chars = fetchRandomNum(0, 100);
             //A-Z :65-90 a-z:97-122,修改成只生成字母
