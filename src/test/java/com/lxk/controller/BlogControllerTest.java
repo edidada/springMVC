@@ -31,7 +31,7 @@ public class BlogControllerTest extends AbstractTest {
     @Test
     public void getTopNBlog() {
         List<Blog> result = blogService.getTopNBlog(10, "read");
-        blogService.sortAllBlog("read", result);
+        blogService.sortAllBlog("read:", result);
         System.out.println(JsonUtils.parseObjToJson(result));
     }
 
