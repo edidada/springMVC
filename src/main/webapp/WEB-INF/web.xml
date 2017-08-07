@@ -53,4 +53,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--若是啥都不配置，就会自动走index.jsp。-->
+    <!--若是配置了，就会从上往下找，直到找到页面。-->
+    <!--要是都没找到，则404-->
+    <welcome-file-list>
+        <welcome-file>tom.jsp</welcome-file>
+        <welcome-file>welcomeOn.jsp</welcome-file>
+        <welcome-file>/WEB-INF/views/welcome.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
 </web-app>

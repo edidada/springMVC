@@ -35,6 +35,15 @@ public class StudentController {
     @Value("${selfPort:100}")
     private String selfPort;
 
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public ModelAndView init() {
+
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("studentDisplay");
+        List<Student> all = studentService.getAllStudent();
+        mav.addObject("students", all);
+        return mav;
+    }
 
     @RequestMapping(value = "/getAllStudent", method = RequestMethod.GET)
     public ModelAndView getAllStudent() {
