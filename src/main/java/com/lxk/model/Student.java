@@ -1,6 +1,8 @@
 package com.lxk.model;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -9,12 +11,17 @@ import java.io.Serializable;
  * Created by lxk on 2017/3/27
  */
 @Document(collection = "student")
+@Data
 public class Student implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     private String id;
     private String name;
     private int age;
     private boolean sex;
+    @Transient
+    private Integer money;
+    transient private Integer floor;
 
 
     public Student() {
@@ -26,37 +33,6 @@ public class Student implements Serializable {
         this.sex = sex;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isSex() {
-        return sex;
-    }
-
-    public void setSex(boolean sex) {
-        this.sex = sex;
-    }
 
     @Override
     public String toString() {
@@ -65,6 +41,8 @@ public class Student implements Serializable {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
+                ", money=" + money +
+                ", floor=" + floor +
                 '}';
     }
 }
