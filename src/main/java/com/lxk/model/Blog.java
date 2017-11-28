@@ -88,8 +88,12 @@ public class Blog {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Blog)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Blog)) {
+            return false;
+        }
         Blog stream = (Blog) o;
         return Objects.equal(getId(), stream.getId());
     }
