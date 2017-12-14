@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by lxk on 2017/3/27
@@ -23,6 +24,7 @@ public class Student implements Serializable {
     private String name;
     private int age;
     private boolean sex;
+    private Date createTime;
     /**
      * 这个就 被数据库保存，估计和mongo的注解实现有关系。
      */

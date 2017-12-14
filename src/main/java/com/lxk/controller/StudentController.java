@@ -89,6 +89,7 @@ public class StudentController {
             return new JsonResult(false, "student is null");
         }
         Student result = studentService.save(student);
+        //Student result = studentService.saveEmptyData(student);
         return result == null
                 ? new JsonResult(false, "查无结果")
                 : new JsonResult(true, "查找成功", result);

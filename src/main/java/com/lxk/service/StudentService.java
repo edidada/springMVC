@@ -1,10 +1,12 @@
 package com.lxk.service;
 
+import com.lxk.annotation.MethodLog;
 import com.lxk.model.Student;
 import com.lxk.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,8 +22,17 @@ public class StudentService {
         return dao.findAll();
     }
 
+    @MethodLog(description = "保存-方法名称save", clazz = Student.class)
     public Student save(Student student) {
+        if (student != null) {
+            student.setCreateTime(new Date());
+        }
         return dao.save(student);
+    }
+
+    @MethodLog(description = "保存-方法名称saveEmptyData", clazz = Student.class)
+    public Student saveEmptyData(Student student) {
+        return null;
     }
 
     public Student findStudetById(String id) {

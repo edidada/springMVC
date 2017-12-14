@@ -14,6 +14,7 @@
         <com.google.guava-version>19.0</com.google.guava-version>
         <org.slf4j-version>1.7.5</org.slf4j-version>
         <org.spring-data-mongodb-version>1.5.0.RELEASE</org.spring-data-mongodb-version>
+        <org.aspectj-version>1.6.10</org.aspectj-version>
         <jackson.version>2.2.3</jackson.version>
         <fastjson-verison>1.2.21</fastjson-verison>
         <lombok-verison>1.16.10</lombok-verison>
@@ -91,6 +92,18 @@
                     <artifactId>servlet-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- AspectJ -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${org.aspectj-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.2</version>
         </dependency>
 
         <!-- mongo 有很多exclusion，是因为jar包冗余，既然知道了，就给剔除掉重复的jar包引入咯-->
