@@ -18,6 +18,7 @@ public class StudentService {
     @Resource(name = "studentRepository")
     private StudentRepository dao;
 
+    @MethodLog(description = "查询-方法名称getAllStudent  ", clazz = Student.class)
     public List<Student> getAllStudent() {
         return dao.findAll();
     }

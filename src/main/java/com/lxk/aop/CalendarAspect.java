@@ -30,10 +30,10 @@ public class CalendarAspect {
     /**
      * 前置通知
      */
-    @Before("aa()")
-    public void beforeMethod(JoinPoint joinPoint) {
+    @Before(value = "@annotation(methodLog)")
+    public void beforeMethod(JoinPoint joinPoint, MethodLog methodLog) {
         System.out.println("before method                start ...");
-
+        System.out.println("before method description：" + methodLog.description() + " clazz：" + methodLog.clazz());
         System.out.println("before method                end ...");
     }
 
@@ -41,7 +41,7 @@ public class CalendarAspect {
      * 环绕通知 around advice
      * 这个切的是 com.lxk.service 包下面以及子包下所有，后面又 && 同时满足带有注解 MethodLog
      */
-    @Around(value = "(execution(* com.lxk.service..*(..))) && @annotation(methodLog)", argNames = "joinPoint, methodLog")
+    @Around(value = "@annotation(methodLog)")
     public Object methodAround(ProceedingJoinPoint joinPoint, MethodLog methodLog) throws Throwable {
         System.out.println("Around method                start.......................");
         User user = getUserFromSession();
@@ -61,7 +61,7 @@ public class CalendarAspect {
      * 最终通知 after advice
      * 使用的是在上面声明的切面，并且带上个注解，意思是除了满足上面aa()方法的条件还得带上注解才OK
      */
-    @After(value = "aa() && @annotation(methodLog)", argNames = "joinPoint, methodLog")
+    @After(value = "@annotation(methodLog)")
     public void methodAfter(JoinPoint joinPoint, MethodLog methodLog) throws Throwable {
         System.out.println("After method                start.......................");
         //获得自定义注解的参数
@@ -74,8 +74,7 @@ public class CalendarAspect {
      * 后置通知
      *
      */
-    @AfterReturning(value = "(execution(* com.lxk.service..*(..))) && @annotation(methodLog)", argNames = "joinPoint, methodLog, result",
-            returning = "result")
+    @AfterReturning(value = "@annotation(methodLog)", returning = "result")
     public void methodAfterReturning(JoinPoint joinPoint, MethodLog methodLog, Object result) throws Throwable {
         System.out.println("AfterReturning method               start.......................");
         System.out.println("AfterReturning method               返回的结果：" + result);
