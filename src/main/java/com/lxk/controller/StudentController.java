@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.net.MalformedURLException;
 import java.util.List;
 
 /**
@@ -36,12 +38,18 @@ public class StudentController {
     private String selfPort;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public ModelAndView init() {
+    public ModelAndView init(HttpServletRequest request) throws MalformedURLException {
 
         ModelAndView mav = new ModelAndView();
         mav.setViewName("studentDisplay");
         List<Student> all = studentService.getAllStudent();
         mav.addObject("students", all);
+        System.out.println("getProperty(\"user.dir\") " + System.getProperty("user.dir"));
+        System.out.println("getServletContext");
+        System.out.println("getRealPath " + request.getSession().getServletContext().getRealPath("/"));
+        System.out.println("getContextPath " + request.getSession().getServletContext().getContextPath());
+        System.out.println("getResourcePaths " + request.getSession().getServletContext().getResourcePaths("/"));
+        System.out.println("getResourcePaths " + request.getSession().getServletContext().getResourceAsStream("/WEB-INF/classes/error.xml"));
         return mav;
     }
 
