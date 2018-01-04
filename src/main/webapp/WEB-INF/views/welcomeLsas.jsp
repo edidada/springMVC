@@ -4,5 +4,6 @@
 <body>
 <h2>Hello World!</h2>
 <h2>path is /webapp/WEB-INF/views/welcome.jsp</h2>
+<h2>怎么就重定向到这个文件去啦。。。</h2>
 </body>
 </html>

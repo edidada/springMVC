@@ -47,6 +47,9 @@
     <!-- aop 注解实现 -->
     <aop:aspectj-autoproxy/>
 
+    <!-- 集成swagger需要 -->
+    <mvc:default-servlet-handler />
+
     <!--处理静态资源的请求-->
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
