@@ -16,10 +16,14 @@ public class ApplicationInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("sessionInfo");
 
-        String root = request.getContextPath();//项目名称，根路径
-        String accessPath = request.getRequestURI();//访问路径
-        String servletPath = request.getServletPath();//相对路径
-        String accessParam = request.getQueryString();//参数
+        //项目名称，根路径
+        String root = request.getContextPath();
+        //访问路径
+        String accessPath = request.getRequestURI();
+        //相对路径
+        String servletPath = request.getServletPath();
+        //参数
+        String accessParam = request.getQueryString();
         //System.out.println("项目名称，根路径" + root + ";访问路径" + accessPath + ";参数" + ";相对路径" + servletPath + accessParam);
         return true;
     }
