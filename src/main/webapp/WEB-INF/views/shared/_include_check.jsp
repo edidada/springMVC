@@ -9,4 +9,3 @@
 
 <link href="<c:url value='/resources/stylesheets/black/qtip/jquery.qtip.min.css'/>" type="text/css" rel="stylesheet"/>
 <!--自定义文件-->
-<script src="<c:url value='/resources/javascripts/ezPlugins/ezsonar-check-data.js'/>" type="text/javascript"></script>

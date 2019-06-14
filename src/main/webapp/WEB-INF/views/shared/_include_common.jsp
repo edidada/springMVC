@@ -19,13 +19,10 @@
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery.cookie.js'/>" type="text/javascript"></script>
 <script src="<c:url value='/resources/javascripts/modules/bootstrap/bootstrap.min.js'/>" type="text/javascript"></script>
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery.slimscroll.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/resources/javascripts/ezPlugins/ezsonar-mainframe.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/resources/javascripts/ezPlugins/ezsonar-utils.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery.form.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery-ui-timepicker-addon.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery-ui-timepicker-zh-CN.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/ezPlugins/moment.js'/>"></script>
-<script src="<c:url value='/resources/javascripts/ezPlugins/daterangepicker-plus-ezsonar.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/ezPlugins/myPagination.js'/>"></script>
 <script src="<c:url value='/resources/javascripts/modules/jquery/jquery.loadmask.js'/>"></script>
 
