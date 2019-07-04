@@ -5,6 +5,15 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:default_setting.properties</value>
+				<value>classpath:mongo.properties</value>
+			</list>
+		</property>
+	</bean>
+
 	<mongo:repositories base-package="com.lxk.repository" />
 
 

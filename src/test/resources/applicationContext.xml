@@ -7,6 +7,17 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+
+    <!-- 这么配置就是使用resources目录下的配置文件，这里是指mongo.properties和default_setting.properties-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:default_setting.properties</value>
+                <value>classpath:mongo.properties</value>
+            </list>
+        </property>
+    </bean>
+
     <!-- 开启spring的扫描注入，使用如下注解 -->
     <!-- @Component,@Repository,@Service,@Controller-->
     <context:component-scan base-package="com.lxk"/>
@@ -30,15 +41,6 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <!-- 这么配置就是使用resources目录下的配置文件，这里是指mongo.properties和default_setting.properties-->
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:default_setting.properties</value>
-                <value>classpath:mongo.properties</value>
-            </list>
-        </property>
-    </bean>
 
     <!-- dao -->
     <import resource="applicationContext-dao.xml"/>
